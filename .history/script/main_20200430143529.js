@@ -82,7 +82,7 @@ document.querySelector(".shorten__links").addEventListener("click", (e) => {
     if (e.target.classList.contains("fa-window-close")){
         const delUrl = e.target.parentNode;
         storedLinks = storedLinks.filter(link => link.shortUrl == delUrl);
-        
+        document.querySelector('.shorten__ganarate').classList.add('remove');
         //save to localStorage
         localStorage.setItem("locaLinks", JSON.stringify(storedLinks));
         //disappear from DOM

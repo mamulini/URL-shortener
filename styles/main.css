@@ -27,6 +27,32 @@ img {
   max-width: 100%;
 }
 
+@-webkit-keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
 .container {
   max-width: 85%;
   margin: 0 auto;
@@ -453,6 +479,8 @@ img {
   border-radius: 8px;
   padding: 15px;
   margin-top: 20px;
+  -webkit-animation: moveInLeft 800ms;
+          animation: moveInLeft 800ms;
 }
 
 @media screen and (max-width: 768px) {

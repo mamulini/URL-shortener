@@ -20,9 +20,9 @@ a:active,
 a:focus,
 input:focus,
 input:active { 
-    -moz-outline-style: none ;
-	outline: none ;
-	outline: 0 ;
+    -moz-outline-style: none;
+	outline:none;
+	outline: 0;
 }
 
 body{
@@ -36,16 +36,21 @@ img {
     max-width: 100%;
 }
 
+@keyframes fadeIn {
+    from {opacity:0; left: 0;}
+    to {opacity:1; right: 100% ;}
+}
 
-@keyframes moveInLeft {
-    0%{
-        opacity: 0;
-        transform: translateX(-200px);
-    }
-
+@keyframes moveInRight {
     100%{
         opacity: 1;
         transform: translate(0);
+    }
+
+
+    0%{
+        opacity: 0;
+        transform: translatex(10rem);
     }
 }
 
@@ -353,7 +358,7 @@ img {
         border-radius: 8px;
         padding: 15px;
         margin-top: 20px;
-        animation: moveInLeft 800ms;
+        animation: moveInRight 800ms;
         @media screen and (max-width: 768px) {
             flex-direction: column;
         }
@@ -387,11 +392,9 @@ img {
             font-size: 30px;
             margin-top: 20px;
         }
-
+        
     }
 }
-
-
 
 .statistics{
     background: $light_bg;

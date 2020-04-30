@@ -80,6 +80,8 @@ input.addEventListener("keypress", e => {
 
 document.querySelector(".shorten__links").addEventListener("click", (e) => {
     if (e.target.classList.contains("fa-window-close")){
+        let genarate = document.querySelector('.shorten__genarate');
+        genarate.classList.add('remove')
         const delUrl = e.target.parentNode;
         storedLinks = storedLinks.filter(link => link.shortUrl == delUrl);
         

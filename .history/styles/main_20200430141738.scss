@@ -20,9 +20,9 @@ a:active,
 a:focus,
 input:focus,
 input:active { 
-    -moz-outline-style: none ;
-	outline: none ;
-	outline: 0 ;
+    -moz-outline-style: none;
+	outline:none;
+	outline: 0;
 }
 
 body{
@@ -40,8 +40,9 @@ img {
 @keyframes moveInLeft {
     0%{
         opacity: 0;
-        transform: translateX(-200px);
+        transform: translateX(-400px);
     }
+
 
     100%{
         opacity: 1;
@@ -387,11 +388,9 @@ img {
             font-size: 30px;
             margin-top: 20px;
         }
-
+        
     }
 }
-
-
 
 .statistics{
     background: $light_bg;
