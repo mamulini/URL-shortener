@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+// colors
+$text_gray: hsl(0, 0%, 75%);
+$cyan_btn:  hsl(180, 66%, 49%);
+$dark_bg : hsl(257, 27%, 26%);
+$red : hsl(0, 87%, 67%);
+$light_bg: #eff1f7;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 84%;
+    margin: 0 auto;
+}
+
+.header {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &__logo{
+        flex: 0 0 25%;
+        max-width: 150px;
+        margin-top: 10px;
+    }
+}
+
+.nav{
+    flex: 0 0 25%;
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        
+    }
+
+    &__item{
+        margin-left: 15px;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $text_gray;
+        &:hover{
+            color: #000000;
+        }
+    }
+}
+
+.user{
+    flex: 0 0 50%;
+    text-align: right;
+
+    &__login{
+        color: $text_gray;
+        margin-right: 30px;
+        text-decoration: none;
+        &:hover{
+            color: #000000;
+        }
+    }
+}
+
+.btn--blue{
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50px;
+    background: $cyan_btn;
+    outline: none;
+    color: #ffffff;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+
+    &:hover{
+        opacity: .5;
+    }
+
+    &:active{
+        transform: scale(0.90);
+    }
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+
+    &__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        max-width: 500px;
+        margin-left: 8%;
+    }
+
+    &__title {
+        font-size: 60px;
+    }
+
+    &__subtitle {
+        text-align-last: left;
+        color: $text_gray;
+    }
+
+    &__btn{
+        margin-top: 40px;
+        padding: 12px 40px;
+    }
+}
+
+.shorten{
+    background: $light_bg;
+    margin-top: 170px;
+
+    &__handler{
+        background-image: url('../images/bg-shorten-desktop.svg');
+        background-position: center;
+        background-size: cover;
+        background-color: $dark_bg;
+        border-radius: 10px;
+        position: relative;
+        top: -70px;
+        margin-bottom: -60px;
+    }
+
+    &__form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 60px;
+    }
+
+    &__input{
+        flex: 1;
+        padding: 15px;
+        border-radius: 8px;
+        margin-right: 15px;
+        font-family:'poppins', sans-serif;
+        border: 2px solid $red;
+        outline: none;
+         &::placeholder{
+            color: $red;
+         }
+    }
+
+    &__btn{
+        border-radius: 8px;
+        padding-top: 15px;
+        padding-bottom: 17px;   
+    }
+
+    &__link{
+        background: #ffffff;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 8px;
+    }
+}
+
+.statistics{
+    background: $light_bg;
+    text-align: center;
+    padding-top: 90px;
+
+    &__title {
+        font-size: 30px;
+    }
+    &__subtitle{
+        max-width: 520px;
+        margin: 10px auto;
+        color: $text_gray;
+    }
+}
+
+.blocks_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: $light_bg;
+    margin-top: 100px;
+}
+
+.block{
+    flex: 0 0 calc(33% - 25px);
+    background: #ffffff;
+    height: 30%;
+    text-align: left;
+    border-radius: 8px;
+    z-index: 1;
+    
+
+    &--2{
+        margin-top: 45px;
+    }
+    &--3{
+        margin-top: 90px;
+    }
+    &__icon{
+        background: $dark_bg ;
+        padding: 20px;
+        border-radius: 100%;
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+        transform:translateY(-45px);
+    }
+    &__title{
+        padding:0 30px 30px;
+        margin-top: -20px;
+    }
+    &__subtitle{
+        padding: 0 30px 20px;
+        line-height: 1.5;
+        color: $text_gray;
+    }
+}
+
+.blocks_wrapper__line{
+    border: 4px solid $cyan_btn;
+    transform:translateY(-2350%);
+    position: relative;
+    flex: 100%;
+    
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
