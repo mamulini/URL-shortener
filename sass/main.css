@@ -40,7 +40,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  outline: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    margin-top: 15px;
+  }
 }
 
 .header__logo {
@@ -210,6 +215,7 @@ img {
   color: #ffffff;
   font-family: 'poppins', sans-serif;
   font-weight: 500;
+  outline: none;
 }
 
 .btn--blue:hover {
