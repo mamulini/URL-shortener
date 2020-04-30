@@ -36,7 +36,8 @@ if (storedLinks){
 
 
 
-shortenBtn.addEventListener("click", () => {
+shortenBtn.addEventListener("submit", (e) => {
+    e.preventDefault();
     async function inputHandle(){
         const res = await fetch("https://rel.ink/api/links/", {
             method:"POST",
@@ -72,7 +73,7 @@ shortenBtn.addEventListener("click", () => {
 input.addEventListener("keypress", e => {
     if (e.keyCode === 13) {
         e.preventDefault();
-        shortenBtn.click();
+        shortenBtn.submit();
     }
   });
 
@@ -141,7 +142,6 @@ const hamburger = () => {
     navLinks.forEach( link => {
         link.addEventListener('click', () => {
             document.body.classList.remove('nav__open');
-            btnHamburger.innerHTML = '<i class="fas fa-bars""></i>';
         });
     });
     

@@ -141,7 +141,6 @@ const hamburger = () => {
     navLinks.forEach( link => {
         link.addEventListener('click', () => {
             document.body.classList.remove('nav__open');
-            btnHamburger.innerHTML = '<i class="fas fa-bars""></i>';
         });
     });
     
