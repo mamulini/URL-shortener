@@ -6,6 +6,17 @@
           box-sizing: border-box;
 }
 
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+}
+
 body {
   font-size: 18px;
   font-family: 'poppins', sans-serif;
@@ -87,6 +98,8 @@ img {
     z-index: 5;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+    -webkit-transition: all 500ms cubic-bezier(0.5, 0, 0.5, 1);
+    transition: all 500ms cubic-bezier(0.5, 0, 0.5, 1);
     background: #372d52;
   }
 }
@@ -215,7 +228,6 @@ img {
   color: #ffffff;
   font-family: 'poppins', sans-serif;
   font-weight: 500;
-  outline: none;
 }
 
 .btn--blue:hover {
